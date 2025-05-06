@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projeto Figma Clone</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Fonte do Figma (exemplo: Poppins) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <img src="logo.png" alt="Logo" class="logo" />
+      <nav class="nav">
+        <ul>
+          <li><a href="#quem-somos">Quem somos</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#clientes">Clientes</a></li>
+          <li><a href="#contato" class="btn-cta">Vamos conversar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <svg class="hero-line" viewBox="0 0 1000 200" preserveAspectRatio="none">
+      <!-- Lado esquerdo rosa -->
+      <path d="M0,150 C150,50 350,250 500,150" stroke="#ffffff" stroke-width="5" fill="none" />
+      <!-- Lado direito invertido -->
+      <path d="M500,150 C650,250 850,50 1000,150" stroke="#d11fb5" stroke-width="5" fill="none" />
+    </svg>
+    <div class="hero-color-split">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1>U-can <br><span>tirando suas ideias do papel</span></h1>
+          <p>Texto simbólico e descritivo conforme necessário.</p>
+          <a href="#contato" class="btn-cta">Vamos conversar</a>
+        </div>
+        <div class="hero-image">
+          <img src="hero-img.png" alt="Mockup ou ilustração" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Quem Somos -->
+  <section class="quem-somos-section">
+    <div class="quem-somos-bloco bloco-esquerda animar-scroll">
+      <div class="texto">
+        <h2>História</h2>
+        <p>
+          Nossa jornada começou com a vontade de transformar ideias em soluções reais.
+          Com criatividade e estratégia, evoluímos para uma equipe multidisciplinar comprometida com a excelência.
+        </p>
+      </div>
+    </div>
+
+    <div class="quem-somos-bloco bloco-direita animar-scroll">
+      <div class="texto">
+        <h2>Propósito</h2>
+        <p>
+          Nosso propósito é empoderar nossos clientes com inovação, ajudando-os a
+          alcançar seus objetivos através de tecnologia e design centrado no usuário.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const elementos = document.querySelectorAll('.animar-scroll');
+      
+      // Função para verificar se o elemento está visível na tela
+      function elementoVisivel(elemento) {
+        const retangulo = elemento.getBoundingClientRect();
+        const alturaJanela = (window.innerHeight || document.documentElement.clientHeight);
+        
+        return (
+          retangulo.top <= (alturaJanela * 0.8) &&
+          retangulo.bottom >= (alturaJanela * 0.2)
+        );
+      }
+      
+      // Verifica elementos visíveis ao carregar a página
+      function verificarElementos() {
+        elementos.forEach(elemento => {
+          if (elementoVisivel(elemento)) {
+            elemento.classList.add('ativo');
+          }
+        });
+      }
+      
+      // Adiciona evento de scroll
+      window.addEventListener('scroll', () => {
+        verificarElementos();
+      });
+      
+      // Verifica os elementos ao carregar a página
+      verificarElementos();
+    });
+  </script>
+  
+
+  <!-- Equipe-->
+  <section class="equipe-section animar-scroll" id="equipe">
+    <h2 class="titulo-equipe">Nossa Equipe</h2>
+    <div class="imagem-container">
+      <img src="imgs/equipe.png" alt="Equipe reunida" class="imagem-equipe">
+    </div>
+  </section>
+
+
+  <!-- Serviços -->
+  <section class="servicos-section animar-scroll" id="servicos">
+    <h2 class="titulo-servicos">Nossos Serviços</h2>
+    <p class="descricao-servicos">Oferecemos soluções completas para impulsionar o seu negócio.</p>
+  
+    <div class="servicos-container">
+      <div class="servico-card">
+        <img src="images/icon-web.png" alt="Desenvolvimento Web">
+        <h3>Desenvolvimento Web</h3>
+        <p>Sites responsivos, rápidos e modernos com foco na experiência do usuário.</p>
+      </div>
+  
+      <div class="servico-card">
+        <img src="images/icon-uiux.png" alt="Design UI/UX">
+        <h3>Design UI/UX</h3>
+        <p>Interfaces intuitivas que encantam visualmente e geram resultados.</p>
+      </div>
+  
+      <div class="servico-card">
+        <img src="images/icon-seo.png" alt="Otimização SEO">
+        <h3>Otimização SEO</h3>
+        <p>Melhore o posicionamento da sua marca nos buscadores com técnicas eficientes.</p>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Clientes -->
+  <section id="clientes" class="clientes">
+    <div class="container">
+      <h2>Alguns dos nossos clientes</h2>
+      <div class="cliente-cards">
+        <input type="radio" name="cliente" id="cliente1" checked>
+        <label for="cliente1">Cliente A</label>
+        <input type="radio" name="cliente" id="cliente2">
+        <label for="cliente2">Cliente B</label>
+        <input type="radio" name="cliente" id="cliente3">
+        <label for="cliente3">Cliente C</label>
+      </div>
+      <div class="cliente-detalhe">
+        <p>Descrição e destaque do cliente selecionado.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Depoimentos -->
+  <section id="depoimentos" class="depoimentos">
+    <div class="container">
+      <h2>Alguns depoimentos nossos clientes</h2>
+      <div class="depoimento-cards">
+        <div class="card">
+          <p>"Depoimento 1..."</p>
+        </div>
+        <div class="card">
+          <p>"Depoimento 2..."</p>
+        </div>
+        <div class="card">
+          <p>"Depoimento 3..."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="contato">
+    <div class="container contato-container">
+      <div class="cta">
+        <h3>Entre em contato</h3>
+        <p>Vamos tirar seu projeto do papel?</p>
+      </div>
+      <div class="formulario">
+        <form>
+          <input type="text" placeholder="Nome" />
+          <input type="email" placeholder="Email" />
+          <textarea placeholder="Mensagem"></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 U-Case. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,527 @@
+/* ========== Reset CSS ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ========== Variáveis (Design Tokens) ========== */
+:root {
+  --primary-color: #eb5286;
+  --secondary-color: #34d399;
+  --text-color: #333333;
+  --bg-light: #f9f9f9;
+  --font-lg: 2.5rem;
+  --font-md: 1.25rem;
+  --font-sm: 0.9rem;
+  --border-radius: 12px;
+  --transition: all 0.3s ease-in-out;
+}
+
+/* ========== Container ========== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+/* ========== Header ========== */
+.header {
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.logo {
+  height: 50px;
+}
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: flex-end;
+}
+.nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+}
+.nav a:hover {
+  color: var(--primary-color);
+}
+.btn-cta {
+  padding: 0.5rem 1.2rem;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+}
+.btn-cta:hover {
+  background-color: #d83e71;
+}
+
+/* ========== Hero Section ========== */
+.hero {
+  padding: 5rem 0;
+  background-color: var(--bg-light);
+}
+
+.hero-color-split {
+  position: relative;
+  background: linear-gradient(to right, #d11fb5 50%, #ffffff 50%);
+  padding: 5rem 0;
+  overflow: hidden;
+}
+
+/* SVG da linha */
+.hero-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+
+/* Mantemos o conteúdo dentro do container centralizado */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Ajustes no texto */
+.hero-text h1 {
+  font-size: var(--font-lg);
+  font-weight: 700;
+  color: white;
+  max-width: 90%;
+}
+.hero-text h1 span {
+  color: white;
+}
+.hero-text p {
+  font-size: var(--font-md);
+  color: white;
+  margin-bottom: 2rem;
+  max-width: 90%;
+}
+.hero-image img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: var(--border-radius);
+}
+  
+  .btn-cta {
+    background: #00E21A;
+    color: #fff;
+    padding: 12px 28px;
+    border: none;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+  }
+  
+  .btn-cta:hover {
+    background: #88F0A0;
+  }
+  
+  /* ====================
+     QUEM SOMOS
+  ==================== */
+  .quem-somos-section {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .quem-somos-bloco {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .bloco-esquerda .texto {
+    text-align: left;
+    max-width: 600px;
+  }
+  
+  .bloco-direita {
+    flex-direction: row-reverse;
+  }
+  
+  .bloco-direita .texto {
+    text-align: right;
+    max-width: 600px;
+  }
+  
+  .texto h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #d11fb5;
+  }
+  
+  .texto p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #333;
+  }
+  
+  @keyframes fadeInLeft {
+    0% { opacity: 0; transform: translateX(-60px); }
+    100% { opacity: 1; transform: translateX(0); }
+  }
+  
+  @keyframes fadeInRight {
+    0% { opacity: 0; transform: translateX(60px); }
+    100% { opacity: 1; transform: translateX(0); }
+  }
+  
+  .bloco-esquerda, .bloco-direita {
+    opacity: 0;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .bloco-esquerda {
+    transform: translateX(-50px);
+  }
+  
+  .bloco-direita {
+    transform: translateX(50px);
+  }
+  
+  /* Quando entra na viewport */
+  .bloco-esquerda.ativo {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .bloco-direita.ativo {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* Equipe */
+
+  .equipe-section {
+    padding: 5rem 2rem;
+    text-align: center;
+    background-color: #f9f9f9;
+  }
+  
+  .titulo-equipe {
+    font-size: 2.5rem;
+    color: #d11fb5;
+    margin-bottom: 2rem;
+  }
+  
+  .imagem-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .imagem-equipe {
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+  }
+  
+  .imagem-equipe:hover {
+    transform: scale(1);
+  }
+  
+  /* Animação com IntersectionObserver */
+  .equipe-section {
+    opacity: 0;
+  }
+  
+  .equipe-section.ativo {
+    animation: fadeInUp 1s ease forwards;
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
+  /* ====================
+     SERVIÇOS
+  ==================== */
+  .servicos-section {
+    padding: 5rem 2rem;
+    background-color: #ffffff;
+    text-align: center;
+  }
+  
+  .titulo-servicos {
+    font-size: 2.5rem;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+  }
+  
+  .descricao-servicos {
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    color: #475569;
+  }
+  
+  .servicos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .servico-card {
+    background: #f1f5f9;
+    padding: 2rem;
+    width: 300px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    opacity: 0;
+  }
+  
+  .servico-card:hover {
+    transform: translateY(-8px);
+  }
+  
+  /* Imagens ou ícones */
+  .servico-card img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 1rem;
+  }
+  
+  /* Fade-up ao rolar */
+  .servicos-section.ativo .servico-card {
+    animation: fadeInUp 1s ease forwards;
+    opacity: 1;
+  }
+  
+  @keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(40px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  
+  /* ====================
+     CLIENTES
+  ==================== */
+  .clientes {
+    padding: 80px 0;
+    text-align: center;
+  }
+  
+  .cliente-cards {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  
+  .cliente-cards input[type="radio"] {
+    display: none;
+  }
+  
+  .cliente-cards label {
+    background: #eee;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .cliente-cards input:checked + label {
+    background: #A01787;
+    color: #fff;
+  }
+  
+  .cliente-detalhe {
+    padding: 20px;
+    background: #D91CA9;
+    color: white;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 6px;
+  }
+  
+/* ====================
+   DEPOIMENTOS
+==================== */
+.depoimentos {
+    padding: 80px 0;
+    background: #fafafa;
+  }
+  
+  .depoimentos h2 {
+    font-size: 32px;
+    color: #A01787;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .depoimentos .cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .depoimentos .card {
+    background: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    font-style: italic;
+  }
+  
+  /* ====================
+     CONTATO
+  ==================== */
+  .contato {
+    padding: 80px 0;
+    background: #fff;
+  }
+  
+  .contato .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+  }
+  
+  .formulario {
+    flex: 1;
+  }
+  
+  .formulario input,
+  .formulario textarea {
+    width: 100%;
+    margin-bottom: 16px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .formulario button {
+    background: #00E21A;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .formulario button:hover {
+    background: #88F0A0;
+  }
+  
+  .redes {
+    flex: 1;
+    text-align: right;
+    font-weight: bold;
+  }
+  
+  /* ====================
+     FOOTER
+  ==================== */
+  footer {
+    background: #A01787;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+  }
+  
+  footer .logo {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  /* ====================
+     ANIMAÇÕES CSS PURO
+  ==================== */
+  [data-scroll] {
+    opacity: 0;
+    transform: translateY(60px);
+    animation: revealY 0.8s forwards;
+  }
+  
+  [data-scroll="left"] {
+    transform: translateX(-60px);
+    animation: revealLeft 0.8s forwards;
+  }
+  
+  [data-scroll="right"] {
+    transform: translateX(60px);
+    animation: revealRight 0.8s forwards;
+  }
+  
+  @keyframes revealY {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes revealLeft {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes revealRight {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* ====================
+     HOVER EFEITOS EXTRAS
+  ==================== */
+  button:hover,
+  a.btn-cta:hover,
+  .steps label:hover,
+  .cliente-cards label:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+  }
+  
