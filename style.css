@@ -281,63 +281,110 @@ body {
   /* ====================
      SERVIÇOS
   ==================== */
-  .servicos-section {
-    padding: 5rem 2rem;
-    background-color: #ffffff;
+  .servicos {
+    text-align: center;
+    padding: 60px 20px;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .tab {
+    background-color: #e0e0e0;
+    border: none;
+    padding: 10px 20px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .tab.active {
+    background-color: #d11fa8;
+    color: white;
+  }
+  
+  .steps-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 30px auto;
+    max-width: 800px;
+  }
+  
+  .step {
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100px;
+  }
+  
+  .step-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    color: #d420a0;
+    border: 2px solid #d420a0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .step-circle.active {
+    background-color: #d420a0;
+    color: white;
+  }
+  
+  .line {
+    width: 50px;
+    height: 2px;
+    background-color: #ccc;
+    transition: background 0.3s;
+  }
+  
+  .line.active {
+    background-color: #d420a0;
+  }
+  
+  .step-title {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: #333;
+  }
+  
+  
+  .step-content {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: #fafafa;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
   }
   
-  .titulo-servicos {
-    font-size: 2.5rem;
-    color: #0f172a;
-    margin-bottom: 0.5rem;
-  }
-  
-  .descricao-servicos {
-    font-size: 1.1rem;
-    margin-bottom: 3rem;
-    color: #475569;
-  }
-  
-  .servicos-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-  }
-  
-  .servico-card {
-    background: #f1f5f9;
-    padding: 2rem;
-    width: 300px;
-    border-radius: 16px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease;
-    opacity: 0;
-  }
-  
-  .servico-card:hover {
-    transform: translateY(-8px);
-  }
-  
-  /* Imagens ou ícones */
-  .servico-card img {
-    width: 64px;
-    height: 64px;
-    margin-bottom: 1rem;
-  }
-  
-  /* Fade-up ao rolar */
-  .servicos-section.ativo .servico-card {
-    animation: fadeInUp 1s ease forwards;
-    opacity: 1;
-  }
-  
-  @keyframes fadeInUp {
-    0% { opacity: 0; transform: translateY(40px); }
-    100% { opacity: 1; transform: translateY(0); }
-  }
-  
+  .step-content p {
+    margin: 0;
+  }  
   
   /* ====================
      CLIENTES
