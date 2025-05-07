@@ -1,336 +1,504 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projeto Figma Clone</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-yxEJ2J9+FQb+JztwSYLvCq6AxdtdYgRl0Y9OQ5oalTQ4zMH0kxgbAiGphq7qAcbF6BuQn1xBGxGy0Qdq2nImWg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projeto Figma Clone</title>
-  <link rel="stylesheet" href="style.css" />
+    <!-- Fonte do Figma (exemplo: Poppins) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-  <!-- Fonte do Figma (exemplo: Poppins) -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <img src="logo.png" alt="Logo" class="logo" />
+        <nav class="nav">
+          <ul>
+            <li><a href="#quem-somos">Quem somos</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#clientes">Clientes</a></li>
+            <li><a href="#contato" class="btn-cta">Vamos conversar</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-<body>
-  <header class="header">
-    <div class="container">
-      <img src="logo.png" alt="Logo" class="logo" />
-      <nav class="nav">
-        <ul>
-          <li><a href="#quem-somos">Quem somos</a></li>
-          <li><a href="#servicos">Serviços</a></li>
-          <li><a href="#clientes">Clientes</a></li>
-          <li><a href="#contato" class="btn-cta">Vamos conversar</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <section class="hero">
-    <svg class="hero-line" viewBox="0 0 1000 200" preserveAspectRatio="none">
-      <!-- Lado esquerdo rosa -->
-      <path d="M0,150 C150,50 350,250 500,150" stroke="#ffffff" stroke-width="5" fill="none" />
-      <!-- Lado direito invertido -->
-      <path d="M500,150 C650,250 850,50 1000,150" stroke="#d11fb5" stroke-width="5" fill="none" />
-    </svg>
-    <div class="hero-color-split">
-      <div class="container hero-grid">
-        <div class="hero-text">
-          <h1>U-can <br><span>tirando suas ideias do papel</span></h1>
-          <p>Texto simbólico e descritivo conforme necessário.</p>
-          <a href="#contato" class="btn-cta">Vamos conversar</a>
+    <section class="hero">
+      <svg class="hero-line" viewBox="0 0 1000 200" preserveAspectRatio="none">
+        <!-- Lado esquerdo rosa -->
+        <path
+          d="M0,150 C150,50 350,250 500,150"
+          stroke="#ffffff"
+          stroke-width="5"
+          fill="none"
+        />
+        <!-- Lado direito invertido -->
+        <path
+          d="M500,150 C650,250 850,50 1000,150"
+          stroke="#d11fb5"
+          stroke-width="5"
+          fill="none"
+        />
+      </svg>
+      <div class="hero-color-split">
+        <div class="container hero-grid">
+          <div class="hero-text">
+            <h1>U-can <br /><span>tirando suas ideias do papel</span></h1>
+            <p>Texto simbólico e descritivo conforme necessário.</p>
+            <a href="#contato" class="btn-cta">Vamos conversar</a>
+          </div>
+          <div class="hero-image">
+            <img src="./imgs/representantes.png" alt="representantes" />
+          </div>
         </div>
-        <div class="hero-image">
-          <img src="hero-img.png" alt="Mockup ou ilustração" />
+      </div>
+    </section>
+
+    <!-- Quem Somos -->
+    <section id="quem-somos" class="quem-somos-section">
+      <div class="quem-somos-bloco bloco-esquerda animar-scroll">
+        <div class="texto">
+          <h2>História</h2>
+          <p>
+            Nossa jornada começou com a vontade de transformar ideias em
+            soluções reais. Com criatividade e estratégia, evoluímos para uma
+            equipe multidisciplinar comprometida com a excelência.
+          </p>
         </div>
       </div>
-    </div>
-  </section>
 
-
-  <!-- Quem Somos -->
-  <section id="quem-somos" class="quem-somos-section">
-    <div class="quem-somos-bloco bloco-esquerda animar-scroll">
-      <div class="texto">
-        <h2>História</h2>
-        <p>
-          Nossa jornada começou com a vontade de transformar ideias em soluções reais.
-          Com criatividade e estratégia, evoluímos para uma equipe multidisciplinar comprometida com a excelência.
-        </p>
+      <div class="quem-somos-bloco bloco-direita animar-scroll">
+        <div class="texto">
+          <h2>Propósito</h2>
+          <p>
+            Nosso propósito é empoderar nossos clientes com inovação,
+            ajudando-os a alcançar seus objetivos através de tecnologia e design
+            centrado no usuário.
+          </p>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="quem-somos-bloco bloco-direita animar-scroll">
-      <div class="texto">
-        <h2>Propósito</h2>
-        <p>
-          Nosso propósito é empoderar nossos clientes com inovação, ajudando-os a
-          alcançar seus objetivos através de tecnologia e design centrado no usuário.
-        </p>
-      </div>
-    </div>
-  </section>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const elementos = document.querySelectorAll(".animar-scroll");
 
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const elementos = document.querySelectorAll('.animar-scroll');
-      
-      // Função para verificar se o elemento está visível na tela
-      function elementoVisivel(elemento) {
-        const retangulo = elemento.getBoundingClientRect();
-        const alturaJanela = (window.innerHeight || document.documentElement.clientHeight);
-        
-        return (
-          retangulo.top <= (alturaJanela * 0.8) &&
-          retangulo.bottom >= (alturaJanela * 0.2)
-        );
-      }
-      
-      // Verifica elementos visíveis ao carregar a página
-      function verificarElementos() {
-        elementos.forEach(elemento => {
-          if (elementoVisivel(elemento)) {
-            elemento.classList.add('ativo');
-          }
+        // Função para verificar se o elemento está visível na tela
+        function elementoVisivel(elemento) {
+          const retangulo = elemento.getBoundingClientRect();
+          const alturaJanela =
+            window.innerHeight || document.documentElement.clientHeight;
+
+          return (
+            retangulo.top <= alturaJanela * 0.8 &&
+            retangulo.bottom >= alturaJanela * 0.2
+          );
+        }
+
+        // Verifica elementos visíveis ao carregar a página
+        function verificarElementos() {
+          elementos.forEach((elemento) => {
+            if (elementoVisivel(elemento)) {
+              elemento.classList.add("ativo");
+            }
+          });
+        }
+
+        // Adiciona evento de scroll
+        window.addEventListener("scroll", () => {
+          verificarElementos();
         });
-      }
-      
-      // Adiciona evento de scroll
-      window.addEventListener('scroll', () => {
+
+        // Verifica os elementos ao carregar a página
         verificarElementos();
       });
-      
-      // Verifica os elementos ao carregar a página
-      verificarElementos();
-    });
-  </script>
-  
+    </script>
 
-  <!-- Equipe-->
-  <section class="equipe-section animar-scroll" id="equipe">
-    <h2 class="titulo-equipe">Nossa Equipe</h2>
-    <div class="imagem-container">
-      <img src="imgs/equipe.png" alt="Equipe reunida" class="imagem-equipe">
+    <!-- Equipe-->
+    <section class="equipe-section animar-scroll" id="equipe">
+      <h2 class="titulo-equipe">Nossa Equipe</h2>
+      <div class="imagem-container">
+        <img src="imgs/equipe.png" alt="Equipe reunida" class="imagem-equipe" />
+      </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos" class="servicos">
+      <h2>Quais serviços oferecemos ?</h2>
+      <div class="tabs">
+        <button class="tab active" onclick="changeService('marketing')">
+          Marketing
+        </button>
+        <button class="tab" onclick="changeService('design')">Design</button>
+        <button class="tab" onclick="changeService('trafego')">
+          Tráfego Pago
+        </button>
+      </div>
+
+      <div class="steps-line" id="steps-line">
+        <!-- Etapas serão renderizadas aqui pelo JS -->
+      </div>
+
+      <div class="step-content" id="step-content">
+        <!-- Conteúdo da etapa atual será exibido aqui -->
+      </div>
+    </section>
+
+    <!-- Clientes -->
+    <section id="clientes" class="clientes">
+      <h2>Clientes</h2>
+      <div class="container">
+        <!-- Lista de clientes -->
+        <div class="cliente-cards">
+          <input type="radio" name="cliente" id="cliente1" checked />
+          <label for="cliente1">Cliente A</label>
+          <input type="radio" name="cliente" id="cliente2" />
+          <label for="cliente2">Cliente B</label>
+          <input type="radio" name="cliente" id="cliente3" />
+          <label for="cliente3">Cliente C</label>
+        </div>
+
+        <!-- Descrição do cliente -->
+        <div class="cliente-detalhe">
+          <p>Descrição e destaque do cliente selecionado.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section id="depoimentos" class="depoimentos">
+      <div class="container">
+        <h2>Alguns Depoimentos nossos clientes</h2>
+        <div class="depoimentos-cards">
+          <div class="depoimento-card">
+            <div class="depoimento-header">
+              <img src="logo1.png" alt="Logo Empresa" class="depoimento-logo" />
+              <h4>Empresa A</h4>
+            </div>
+            <p>
+              Depoimento do cliente falando sobre a experiência que teve e
+              enchendo linguiça.
+            </p>
+          </div>
+          <div class="depoimento-card">
+            <div class="depoimento-header">
+              <img src="logo2.png" alt="Logo Empresa" class="depoimento-logo" />
+              <h4>Empresa B</h4>
+            </div>
+            <p>
+              Depoimento do cliente falando sobre a experiência que teve e
+              enchendo linguiça.
+            </p>
+          </div>
+          <div class="depoimento-card">
+            <div class="depoimento-header">
+              <img src="logo3.png" alt="Logo Empresa" class="depoimento-logo" />
+              <h4>Empresa C</h4>
+            </div>
+            <p>
+              Depoimento do cliente falando sobre a experiência que teve e
+              enchendo linguiça.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- Contato -->
+<section id="contato" class="contato">
+  <div class="aviao-container">
+    <svg class="linha-tracejada" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 100" preserveAspectRatio="none">
+      <path class="linha-path" d="M0,50 C150,0 350,100 500,50" />
+    </svg>
+    <img src="imgs/aviao.png" alt="avião" class="aviao" />
+  </div>
+
+  <div class="container contato-container">
+    <div class="cta">
+      <h3>Entre em contato</h3>
+      <p>Vamos criar algo incrível?</p>
+      <button type="button">Vamos conversar</button>
     </div>
-  </section>
 
-
-  <!-- Serviços -->
-<section id="servicos" class="servicos">
-  <h2>Nossos Serviços</h2>
-  <div class="tabs">
-    <button class="tab active" onclick="changeService('marketing')">Marketing</button>
-    <button class="tab" onclick="changeService('design')">Design</button>
-    <button class="tab" onclick="changeService('trafego')">Tráfego Pago</button>
-  </div>
-
-  <div class="steps-line" id="steps-line">
-    <!-- Etapas serão renderizadas aqui pelo JS -->
-  </div>
-
-  <div class="step-content" id="step-content">
-    <!-- Conteúdo da etapa atual será exibido aqui -->
+    <div class="formulario">
+      <h3>Nos envie um email</h3>
+      <form id="form-contato" action="https://formspree.io/f/xyzwjele" method="POST">
+        <input type="text" name="nome" placeholder="Nome" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <textarea name="mensagem" placeholder="Conteúdo da mensagem" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
   </div>
 </section>
-  
 
-  <!-- Clientes -->
-  <section id="clientes" class="clientes">
-    <div class="container">
-      <h2>Alguns dos nossos clientes</h2>
-      <div class="cliente-cards">
-        <input type="radio" name="cliente" id="cliente1" checked>
-        <label for="cliente1">Cliente A</label>
-        <input type="radio" name="cliente" id="cliente2">
-        <label for="cliente2">Cliente B</label>
-        <input type="radio" name="cliente" id="cliente3">
-        <label for="cliente3">Cliente C</label>
-      </div>
-      <div class="cliente-detalhe">
-        <p>Descrição e destaque do cliente selecionado.</p>
-      </div>
-    </div>
-  </section>
+<!-- Toast -->
+<div id="toast" class="toast">Mensagem enviada com sucesso! 🚀</div>
 
-  <!-- Depoimentos -->
-  <section id="depoimentos" class="depoimentos">
-    <div class="container">
-      <h2>Alguns depoimentos nossos clientes</h2>
-      <div class="depoimento-cards">
-        <div class="card">
-          <p>"Depoimento 1..."</p>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-left">
+          <img src="logo.png" alt="Logo da U-can" />
         </div>
-        <div class="card">
-          <p>"Depoimento 2..."</p>
-        </div>
-        <div class="card">
-          <p>"Depoimento 3..."</p>
+        <div class="footer-right">
+          <div class="info-row">
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>            
+            <span class="divider">|</span>
+            <h4>U-can</h4>
+          </div>
+          <p class="copyright">
+            Política de privacidade conteúdo protegido ©2025
+          </p>
         </div>
       </div>
-    </div>
-  </section>
+    </footer>
+    
 
-  <!-- Contato -->
-  <section id="contato" class="contato">
-    <div class="container contato-container">
-      <div class="cta">
-        <h3>Entre em contato</h3>
-        <p>Vamos tirar seu projeto do papel?</p>
-      </div>
-      <div class="formulario">
-        <form>
-          <input type="text" placeholder="Nome" />
-          <input type="email" placeholder="Email" />
-          <textarea placeholder="Mensagem"></textarea>
-          <button type="submit">Enviar</button>
-        </form>
-      </div>
-    </div>
-  </section>
+    <script>
+      // Função para atualizar o conteúdo da etapa atual
+      const serviceData = {
+        marketing: {
+          steps: [
+            "Briefing",
+            "Análise de Perfil",
+            "Planejamento de Conteúdo",
+            "Execução e Monitoramento",
+          ],
+          content: [
+            "Reunimos informações sobre a marca, público e objetivos para montar o plano ideal.",
+            "Analisamos o perfil do cliente ideal e a presença digital atual.",
+            "Criamos uma estratégia de conteúdo com base nos objetivos traçados.",
+            "Executamos as ações e monitoramos os resultados em tempo real.",
+          ],
+        },
+        design: {
+          steps: ["Pesquisa", "Wireframe", "Prototipação", "Entrega Final"],
+          content: [
+            "Entendimento do negócio, benchmark e referências visuais.",
+            "Esboçamos a estrutura básica das telas para aprovação de layout.",
+            "Desenvolvemos protótipos navegáveis com interações reais.",
+            "Entrega dos arquivos finais otimizados e prontos para desenvolvimento.",
+          ],
+        },
+        trafego: {
+          steps: [
+            "Diagnóstico",
+            "Criação de Campanhas",
+            "Teste A/B",
+            "Otimização de ROI",
+          ],
+          content: [
+            "Avaliamos o histórico e dados da conta para definir metas de tráfego.",
+            "Desenvolvemos campanhas com segmentações específicas.",
+            "Realizamos testes A/B com diferentes criativos e públicos.",
+            "Ajustamos campanhas com foco em performance e retorno.",
+          ],
+        },
+      };
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p>© 2025 U-Case. Todos os direitos reservados.</p>
-    </div>
-  </footer>
+      let currentService = "marketing";
+      let currentStep = 0;
 
-  <script>
-    const serviceData = {
-      marketing: {
-        steps: ["Briefing", "Análise de Perfil", "Planejamento de Conteúdo", "Execução e Monitoramento"],
-        content: [
-          "Reunimos informações sobre a marca, público e objetivos para montar o plano ideal.",
-          "Analisamos o perfil do cliente ideal e a presença digital atual.",
-          "Criamos uma estratégia de conteúdo com base nos objetivos traçados.",
-          "Executamos as ações e monitoramos os resultados em tempo real."
-        ]
-      },
-      design: {
-        steps: ["Pesquisa", "Wireframe", "Prototipação", "Entrega Final"],
-        content: [
-          "Entendimento do negócio, benchmark e referências visuais.",
-          "Esboçamos a estrutura básica das telas para aprovação de layout.",
-          "Desenvolvemos protótipos navegáveis com interações reais.",
-          "Entrega dos arquivos finais otimizados e prontos para desenvolvimento."
-        ]
-      },
-      trafego: {
-        steps: ["Diagnóstico", "Criação de Campanhas", "Teste A/B", "Otimização de ROI"],
-        content: [
-          "Avaliamos o histórico e dados da conta para definir metas de tráfego.",
-          "Desenvolvemos campanhas com segmentações específicas.",
-          "Realizamos testes A/B com diferentes criativos e públicos.",
-          "Ajustamos campanhas com foco em performance e retorno."
-        ]
+      function changeService(serviceName) {
+        currentService = serviceName;
+        currentStep = 0;
+
+        // Atualizar a aba ativa
+        document
+          .querySelectorAll(".tab")
+          .forEach((tab) => tab.classList.remove("active"));
+        document
+          .querySelector(`.tab[onclick*="${serviceName}"]`)
+          .classList.add("active");
+
+        // Renderizar os passos e o conteúdo do serviço selecionado
+        renderSteps(currentService); // Passar o serviço atual
+        renderContent();
       }
-    };
-  
-    let currentService = "marketing";
-    let currentStep = 0;
-  
-    function changeService(serviceName) {
-      currentService = serviceName;
-      currentStep = 0;
-  
-      document.querySelectorAll(".tab").forEach(tab => tab.classList.remove("active"));
-      document.querySelector(`.tab[onclick*="${serviceName}"]`).classList.add("active");
-  
-      renderSteps();
-      renderContent();
-    }
-  
-    function changeStep(index) {
-      currentStep = index;
-      renderSteps();
-      renderContent();
-    }
-  
-    function renderSteps(serviceKey) {
-      const service = serviceData[serviceKey];
-      if (!service || !service.steps) return;
-    
-      const steps = service.steps;
-      const stepsLine = document.getElementById("steps-line");
-      stepsLine.innerHTML = ""; // Limpar passos anteriores
-    
-      steps.forEach((step, index) => {
-        // Criar container do passo
-        const stepDiv = document.createElement("div");
-        stepDiv.classList.add("step");
-        if (index === currentStep) {
-          stepDiv.classList.add("active");
-        }
-    
-        // Ao clicar, atualizar o passo atual
-        stepDiv.addEventListener("click", () => {
-          changeStep(index); // Atualiza o conteúdo
-        });
-    
-        // Criar círculo numerado
-        const circle = document.createElement("div");
-        circle.classList.add("step-circle");
-        circle.textContent = index + 1;
-        if (index === currentStep) {
-          circle.classList.add("active");
-        }
-    
-        // Criar título do passo
-        const title = document.createElement("div");
-        title.classList.add("step-title");
-        title.textContent = step;
-    
-        // Montar a estrutura
-        stepDiv.appendChild(circle);
-        stepDiv.appendChild(title);
-        stepsLine.appendChild(stepDiv);
-    
-        // Linha conectora entre passos
-        if (index < steps.length - 1) {
-          const line = document.createElement("div");
-          line.classList.add("line");
-          stepsLine.appendChild(line);
-        }
-      });
-    
-      updateStepVisuals();
-    }
-    
-    function updateStepVisuals() {
-      const stepCircles = document.querySelectorAll(".step-circle");
-      const lines = document.querySelectorAll(".line");
-    
-      stepCircles.forEach((circle, index) => {
-        if (index <= currentStep) {
-          circle.classList.add("active");
-        } else {
-          circle.classList.remove("active");
-        }
-      });
-    
-      lines.forEach((line, index) => {
-        if (index < currentStep) {
-          line.classList.add("active");
-        } else {
-          line.classList.remove("active");
-        }
-      });
-    
-      const contentBox = document.getElementById("step-content");
-      contentBox.innerHTML = `<p>${serviceData[currentService].content[currentStep]}</p>`;
-    }
-  
-    function renderContent() {
-      const contentBox = document.getElementById("step-content");
-      contentBox.textContent = serviceData[currentService].content[currentStep];
-    }
-  
-    // Inicialização
-    document.addEventListener("DOMContentLoaded", () => {
-      renderSteps(currentService); // Passar o serviço atual
-      renderContent();
-    });
-  </script>  
 
-</body>
+      function changeStep(index) {
+        currentStep = index;
+        renderSteps(currentService); // Passar o serviço atual
+        renderContent();
+      }
+
+      function renderSteps(serviceKey) {
+        const service = serviceData[serviceKey];
+        if (!service || !service.steps) return;
+
+        const steps = service.steps;
+        const stepsLine = document.getElementById("steps-line");
+        stepsLine.innerHTML = ""; // Limpar passos anteriores
+
+        steps.forEach((step, index) => {
+          // Criar container do passo
+          const stepDiv = document.createElement("div");
+          stepDiv.classList.add("step");
+          if (index === currentStep) {
+            stepDiv.classList.add("active");
+          }
+
+          // Ao clicar, atualizar o passo atual
+          stepDiv.addEventListener("click", () => {
+            changeStep(index); // Atualiza o conteúdo
+          });
+
+          // Criar círculo numerado
+          const circle = document.createElement("div");
+          circle.classList.add("step-circle");
+          circle.textContent = index + 1;
+          if (index === currentStep) {
+            circle.classList.add("active");
+          }
+
+          // Criar título do passo
+          const title = document.createElement("div");
+          title.classList.add("step-title");
+          title.textContent = step;
+
+          // Montar a estrutura
+          stepDiv.appendChild(circle);
+          stepDiv.appendChild(title);
+          stepsLine.appendChild(stepDiv);
+
+          // Linha conectora entre passos
+          if (index < steps.length - 1) {
+            const line = document.createElement("div");
+            line.classList.add("line");
+            stepsLine.appendChild(line);
+          }
+        });
+
+        updateStepVisuals();
+      }
+
+      function updateStepVisuals() {
+        const stepCircles = document.querySelectorAll(".step-circle");
+        const lines = document.querySelectorAll(".line");
+
+        stepCircles.forEach((circle, index) => {
+          if (index <= currentStep) {
+            circle.classList.add("active"); // Ativa os itens até o índice atual
+          } else {
+            circle.classList.remove("active"); // Desativa os itens após o índice atual
+          }
+        });
+
+        lines.forEach((line, index) => {
+          if (index < currentStep) {
+            line.classList.add("active"); // Ativa as linhas até o índice atual
+          } else {
+            line.classList.remove("active"); // Desativa as linhas após o índice atual
+          }
+        });
+
+        const contentBox = document.getElementById("step-content");
+        contentBox.innerHTML = `<p>${serviceData[currentService].content[currentStep]}</p>`;
+      }
+
+      function renderContent() {
+        const contentBox = document.getElementById("step-content");
+        contentBox.textContent =
+          serviceData[currentService].content[currentStep];
+      }
+
+      // Inicialização
+      document.addEventListener("DOMContentLoaded", () => {
+        renderSteps(currentService); // Passar o serviço atual
+        renderContent();
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const contatoSection = document.querySelector("#contato");
+
+        const observer = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                contatoSection.classList.add("animate");
+                observer.unobserve(contatoSection); // só anima uma vez
+              }
+            });
+          },
+          {
+            threshold: 0.5, // 50% da seção visível
+          }
+        );
+
+        if (contatoSection) {
+          observer.observe(contatoSection);
+        }
+      });
+
+      function enviarMensagem(e) {
+    e.preventDefault();
+    const form = e.target;
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: {
+        'Accept': 'application/json'
+      }
+    })
+    .then(response => {
+      alert("🚀 Mensagem enviada com sucesso!");
+      form.reset();
+    })
+    .catch(error => {
+      alert("❌ Erro ao enviar. Tente novamente.");
+    });
+  }
+
+  const form = document.getElementById("form-contato");
+  const toast = document.getElementById("toast");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: { Accept: "application/json" },
+      });
+
+      if (response.ok) {
+        form.reset();
+        showToast("Mensagem enviada com sucesso! 🚀");
+      } else {
+        showToast("Algo deu errado 😢");
+      }
+    } catch (err) {
+      showToast("Erro de conexão ⚠️");
+    }
+  });
+
+  function showToast(message) {
+    toast.textContent = message;
+    toast.classList.add("show");
+    setTimeout(() => toast.classList.remove("show"), 4000);
+  }
+
+    </script>
+  </body>
 </html>
