@@ -521,6 +521,18 @@ body {
   color: #d11fb5;
   cursor: pointer;
   transition: color 0.3s ease, transform 0.3s ease;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.nav-btn.prev-btn {
+  left: 10px;
+}
+
+.nav-btn.next-btn {
+  right: 10px;
 }
 
 .nav-btn:hover {
@@ -549,8 +561,20 @@ body {
 }
 
 /* Estilo para Flip Card */
+.servicos-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
 .card-container {
   perspective: 1000px;
+  display: none;
+}
+
+.card-container.active {
+  display: block;
 }
 
 .card {

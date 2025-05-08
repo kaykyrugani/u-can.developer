@@ -225,37 +225,66 @@
   }
 
   let currentCardIndex = 0;
-  const cards = document.querySelectorAll(".cartao");
-  const indicators = document.querySelectorAll(".indicador");
+  const cardContainers = document.querySelectorAll(".card-container");
 
-  function updateCards() {
-    cards.forEach((card, index) => {
-      card.classList.toggle("active", index === currentCardIndex);
-    });
-
-    indicators.forEach((indicator, index) => {
-      indicator.classList.toggle("active", index === currentCardIndex);
+  function updateVisibleCard() {
+    cardContainers.forEach((container, index) => {
+      container.classList.toggle("active", index === currentCardIndex);
     });
   }
 
-  function navigateService(direction) {
+  function navigateCard(direction) {
     currentCardIndex += direction;
 
+    // Loop infinito entre os cards
     if (currentCardIndex < 0) {
-      currentCardIndex = cards.length - 1;
-    } else if (currentCardIndex >= cards.length) {
+      currentCardIndex = cardContainers.length - 1;
+    } else if (currentCardIndex >= cardContainers.length) {
       currentCardIndex = 0;
     }
 
-    updateCards();
+    updateVisibleCard();
   }
-
-  // Inicialização
-  document.addEventListener("DOMContentLoaded", () => {
-    updateCards();
-  });
 
   function flipCard(cardId) {
     const card = document.getElementById(cardId);
     card.classList.toggle("flipped");
   }
+
+  // Inicialização
+  document.addEventListener("DOMContentLoaded", () => {
+    updateVisibleCard();
+  });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    let currentCardIndex = 0;
+    const cardContainers = document.querySelectorAll(".card-container");
+
+    // Atualiza a visibilidade dos cards
+    function updateVisibleCard() {
+      cardContainers.forEach((container, index) => {
+        container.classList.toggle("active", index === currentCardIndex);
+      });
+    }
+
+    // Navega entre os cards
+    function navigateCard(direction) {
+      currentCardIndex += direction;
+
+      // Loop infinito entre os cards
+      if (currentCardIndex < 0) {
+        currentCardIndex = cardContainers.length - 1;
+      } else if (currentCardIndex >= cardContainers.length) {
+        currentCardIndex = 0;
+      }
+
+      updateVisibleCard();
+    }
+
+    // Adiciona eventos aos botões de navegação
+    document.querySelector(".prev-btn").addEventListener("click", () => navigateCard(-1));
+    document.querySelector(".next-btn").addEventListener("click", () => navigateCard(1));
+
+    // Inicializa o primeiro card como ativo
+    updateVisibleCard();
+  });
