@@ -296,6 +296,7 @@ body {
 .servicos {
   text-align: center;
   padding: 60px 20px;
+  background-color: #f9f9f9;
 }
 
 .tabs {
@@ -395,6 +396,117 @@ body {
 
 .step-content p {
   margin: 0;
+}
+
+/* Serviços */
+.servicos {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+.servicos h2 {
+  font-size: 2.5rem;
+  color: #d11fb5;
+  margin-bottom: 40px;
+}
+
+.servicos-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+}
+
+.cartao-container {
+  width: 650px;
+  overflow: hidden;
+  position: relative;
+}
+
+.cartao {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.cartao.active {
+  display: flex;
+  opacity: 1;
+  transform: scale(1);
+  height: 350px;
+}
+
+.cartao h3 {
+  font-size: 1.5rem;
+  color: #d11fb5;
+  margin-bottom: 10px;
+}
+
+.cartao ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+}
+
+.cartao ul li {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.cta-btn {
+  background-color: #d11fb5;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #b10f95;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #d11fb5;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-btn:hover {
+  color: #b10f95;
+}
+
+.indicadores {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.indicador {
+  width: 12px;
+  height: 12px;
+  background-color: #ccc;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.indicador.active {
+  background-color: #d11fb5;
 }
 
 /* ====================

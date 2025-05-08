@@ -1,4 +1,4 @@
-      // Função para atualizar o conteúdo da etapa atual
+// Função para atualizar o conteúdo da etapa atual
       const serviceData = {
         marketing: {
           steps: [
@@ -223,3 +223,34 @@
     toast.classList.add("show");
     setTimeout(() => toast.classList.remove("show"), 4000);
   }
+
+  let currentCardIndex = 0;
+  const cards = document.querySelectorAll(".cartao");
+  const indicators = document.querySelectorAll(".indicador");
+
+  function updateCards() {
+    cards.forEach((card, index) => {
+      card.classList.toggle("active", index === currentCardIndex);
+    });
+
+    indicators.forEach((indicator, index) => {
+      indicator.classList.toggle("active", index === currentCardIndex);
+    });
+  }
+
+  function navigateService(direction) {
+    currentCardIndex += direction;
+
+    if (currentCardIndex < 0) {
+      currentCardIndex = cards.length - 1;
+    } else if (currentCardIndex >= cards.length) {
+      currentCardIndex = 0;
+    }
+
+    updateCards();
+  }
+
+  // Inicialização
+  document.addEventListener("DOMContentLoaded", () => {
+    updateCards();
+  });

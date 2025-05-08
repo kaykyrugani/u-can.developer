@@ -136,23 +136,44 @@
 
     <!-- Serviços -->
     <section id="servicos" class="servicos">
-      <h2>Quais serviços oferecemos ?</h2>
-      <div class="tabs">
-        <button class="tab active" onclick="changeService('marketing')">
-          Marketing
-        </button>
-        <button class="tab" onclick="changeService('design')">Design</button>
-        <button class="tab" onclick="changeService('trafego')">
-          Tráfego Pago
-        </button>
+      <h2>Quais serviços oferecemos?</h2>
+      <div class="servicos-container">
+        <button class="nav-btn prev-btn" onclick="navigateService(-1)">&#x276E;</button>
+        <div class="cartao-container">
+          <div class="cartao" id="cartao-marketing">
+            <h3>Marketing</h3>
+            <ul>
+              <li>Briefing</li>
+              <li>Análise de Perfil</li>
+              <li>Planejamento de Conteúdo</li>
+            </ul>
+            <button class="cta-btn">Veja mais →</button>
+          </div>
+          <div class="cartao" id="cartao-design">
+            <h3>Design</h3>
+            <ul>
+              <li>Design de Marca</li>
+              <li>Identidade Visual</li>
+              <li>Wireframes</li>
+            </ul>
+            <button class="cta-btn">Veja mais →</button>
+          </div>
+          <div class="cartao" id="cartao-trafego">
+            <h3>Tráfego Pago</h3>
+            <ul>
+              <li>Diagnóstico</li>
+              <li>Criação de Campanhas</li>
+              <li>Teste A/B</li>
+            </ul>
+            <button class="cta-btn">Veja mais →</button>
+          </div>
+        </div>
+        <button class="nav-btn next-btn" onclick="navigateService(1)">&#x276F;</button>
       </div>
-
-      <div class="steps-line" id="steps-line">
-        <!-- Etapas serão renderizadas aqui pelo JS -->
-      </div>
-
-      <div class="step-content" id="step-content">
-        <!-- Conteúdo da etapa atual será exibido aqui -->
+      <div class="indicadores">
+        <span class="indicador active"></span>
+        <span class="indicador"></span>
+        <span class="indicador"></span>
       </div>
     </section>
 
