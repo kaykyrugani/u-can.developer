@@ -157,27 +157,45 @@
           </div>
         </div>
         <div class="card-container">
-          <div class="card" id="card-marketing">
+          <div class="card" id="card-design">
             <div class="card-face front">
-              <h3>Marketing</h3>
+              <h3>Design</h3>
               <ul>
-                <li>Briefing</li>
-                <li>Análise de Perfil</li>
-                <li>Planejamento de Conteúdo</li>
+                <li>Pesquisa</li>
+                <li>Wireframe</li>
+                <li>Prototipação</li>
               </ul>
-              <button class="flip-btn" onclick="flipCard('card-marketing')">Veja mais →</button>
+              <button class="flip-btn" onclick="flipCard('card-design')">Veja mais →</button>
             </div>
             <div class="card-face back">
               <h3>Mais Informações</h3>
-              <p>Detalhes sobre o serviço de Marketing.</p>
-              <button class="flip-btn" onclick="flipCard('card-marketing')">← Voltar</button>
+              <p>Detalhes sobre o serviço de Design.</p>
+              <button class="flip-btn" onclick="flipCard('card-design')">← Voltar</button>
+            </div>
+          </div>
+        </div>
+        <div class="card-container">
+          <div class="card" id="card-trafego">
+            <div class="card-face front">
+              <h3>Tráfego</h3>
+              <ul>
+                <li>Diagnóstico</li>
+                <li>Criação de Campanhas</li>
+                <li>Teste A/B</li>
+              </ul>
+              <button class="flip-btn" onclick="flipCard('card-trafego')">Veja mais →</button>
+            </div>
+            <div class="card-face back">
+              <h3>Mais Informações</h3>
+              <p>Detalhes sobre o serviço de Tráfego.</p>
+              <button class="flip-btn" onclick="flipCard('card-trafego')">← Voltar</button>
             </div>
           </div>
         </div>
 
         <!-- Botões de navegação -->
-        <button class="nav-btn prev-btn">&#60;</button>
-        <button class="nav-btn next-btn">&#62;</button>
+        <button class="nav-btn prev-btn" onclick="navigateCard(-1)">&#60;</button>
+        <button class="nav-btn next-btn" onclick="navigateCard(1)">&#62;</button>
       </div>
     </section>
 
